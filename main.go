@@ -49,7 +49,7 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
-	router.GET("/:userid", func(c *gin.Context) {
+	router.GET("/user/:userid", func(c *gin.Context) {
 		keyword := c.Param("userid")
 
 		user := map[string]User{}
